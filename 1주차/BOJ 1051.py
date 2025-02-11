@@ -4,7 +4,7 @@ def find_largest_square(n,m,grid):
     for i in range(n):
         for j in range(m):
             #격자 밖으로 나가지 않게
-            for k in range(min(n-i,m-j)):
+            for k in range(min(n-i,m-j)): # 정사각형이니까 작은 변 크기로
                 if grid[i][j] == grid[i][j+k] == grid[i+k][j] == grid[i+k][j+k]:
                     max_size=max(max_size, (k+1) ** 2) #정사각형 크기 구하기
     return max_size

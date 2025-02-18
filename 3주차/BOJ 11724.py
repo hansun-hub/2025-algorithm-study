@@ -1,5 +1,6 @@
 from collections import deque
 import sys
+input = sys.stdin.readline  # 빠른 입력
 
 def bfs(start):
     queue = deque([start])
